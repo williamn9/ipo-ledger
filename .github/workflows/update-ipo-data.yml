@@ -1,0 +1,54 @@
+name: Update IPO data
+
+on:
+  schedule:
+    # 每日 08:00 香港時間（00:00 UTC）
+    - cron: "0 0 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-ipo-data
+  cancel-in-progress: false
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Scrape queue
+        continue-on-error: true
+        run: python3 scrape_queue.py
+
+      - name: Scrape calendar
+        continue-on-error: true
+        run: python3 scrape_calendar.py
+
+      - name: Scrape listed
+        continue-on-error: true
+        run: python3 scrape.py
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add \
+            data.json data.js \
+            queue-data.json queue-data.js \
+            calendar-data.json calendar-data.js
+          if git diff --staged --quiet; then
+            echo "No data changes."
+            exit 0
+          fi
+          git commit -m "chore: refresh IPO data ($(date -u +%Y-%m-%dT%H:%MZ))"
+          git push
