@@ -1,7 +1,7 @@
 {
   "as_of": "2026-07-27",
   "window_end": "2026-08-26",
-  "fetched_at": "2026-07-27T22:22:28",
+  "fetched_at": "2026-07-27T14:33:26",
   "count": 1,
   "items": [
     {
@@ -18,24 +18,10 @@
       "status": "正在招股",
       "deadline_iso": "2026-07-27",
       "listing_date_iso": "2026-07-30",
-      "oversub_primary": "20.9 倍",
-      "oversub_multiple": 20.928,
-      "oversub_note": "市場估算（華盛孖展×校準）",
-      "news": [
-        {
-          "multiple": 20.928,
-          "display": "20.9 倍",
-          "note": "市場估算（華盛孖展×校準）",
-          "headline": "中際旭創 估計超購 20.9 倍",
-          "observed_at": "2026-07-27T13:05:11.972Z"
-        },
-        {
-          "multiple": 9.0,
-          "display": "9 倍",
-          "note": "HKET（孖展／公開統計）",
-          "headline": "【新股IPO】中際旭創3308市傳定價980元、集資縮至約534億元　孖展559.9億超購逾9倍　H股水位理論值有幾多"
-        }
-      ]
+      "oversub_primary": "尚未見報道",
+      "oversub_multiple": null,
+      "oversub_note": "招股中／未見超購消息",
+      "news": []
     }
   ],
   "sources": [
