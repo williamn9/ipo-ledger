@@ -10,21 +10,21 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Syne:wght@600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=6" />
+    <link rel="stylesheet" href="styles.css?v=7" />
   </head>
-  <body class="page-listed">
+  <body>
     <div class="atmosphere" aria-hidden="true"></div>
     <nav class="site-nav" aria-label="頁面切換">
       <a href="calendar.html">IPO 月曆</a>
       <a href="queue.html">排隊上市</a>
       <a href="index.html" aria-current="page">已上市</a>
     </nav>
-    <header class="top listed-hero">
+    <header class="top">
       <div class="brand-block">
         <p class="brand">IPO Ledger</p>
         <h1>最近上市</h1>
         <p class="lede">
-          只顯示 AAStocks 最新一頁，聚焦超額、穩中一手資金同上市後表現。
+          AAStocks 最新一頁，以單一表格瀏覽、搜尋與排序。
         </p>
       </div>
       <div class="meta">
@@ -40,7 +40,7 @@
       </div>
     </header>
 
-    <section class="toolbar listed-toolbar" aria-label="篩選工具">
+    <section class="toolbar" aria-label="表格工具">
       <label class="search">
         <span class="sr-only">搜尋</span>
         <input
@@ -50,37 +50,49 @@
           autocomplete="off"
         />
       </label>
-      <label class="filter sort-filter">
-        <span class="sr-only">排序</span>
-        <select id="sort-key" aria-label="排序">
-          <option value="listing_date">上市日期</option>
-          <option value="oversub">超額倍數</option>
-          <option value="one_lot_cash">穩中一手資金</option>
-          <option value="first_day">首日表現</option>
-          <option value="cumulative" selected>累積表現</option>
-        </select>
-      </label>
       <label class="filter">
         <input id="below-only" type="checkbox" />
-        跌穿上市價
+        只顯示跌穿上市價
       </label>
       <label class="filter">
         <input id="oversub-1000" type="checkbox" />
-        超額 ≥1000 倍
+        只顯示超額 ≥1000 倍
       </label>
       <p class="visible" id="visible-count"></p>
     </section>
 
-    <main id="listed-list" class="listed-list" aria-live="polite"></main>
+    <main class="table-wrap">
+      <table id="ipo-table">
+        <thead>
+          <tr>
+            <th data-key="name" class="sortable txt-l">名稱 / 代號</th>
+            <th data-key="listing_date" class="sortable">上市日期</th>
+            <th data-key="lot_size" class="sortable">每手股數</th>
+            <th data-key="market_cap" class="sortable">上市市值(億元)</th>
+            <th data-key="offer_price" class="sortable">招股價</th>
+            <th data-key="listing_price" class="sortable">上市價</th>
+            <th data-key="oversub" class="sortable">超額倍數</th>
+            <th data-key="one_lot" class="sortable">穩中一手</th>
+            <th data-key="one_lot_cash" class="sortable">穩中一手所需資金</th>
+            <th data-key="allotment" class="sortable">中籤率</th>
+            <th data-key="current_price" class="sortable">現價</th>
+            <th data-key="first_day" class="sortable">首日表現</th>
+            <th data-key="cumulative" class="sortable sorted-desc">累積表現</th>
+          </tr>
+        </thead>
+        <tbody id="tbody"></tbody>
+      </table>
+    </main>
 
     <footer class="foot">
       <p>
-        延遲報價最少十五分鐘。「穩中一手所需資金」= 穩中一手 × 每手股數 × 招股價。GitHub
+        延遲報價最少十五分鐘。首日表現以 [(首日收市價 − 上市價) / 上市價] × 100%
+        計算。「穩中一手所需資金」= 穩中一手 × 每手股數 × 招股價（缺資料顯示 —）。GitHub
         每日自動更新；本機即時更新請跑 <code>python3 server.py</code>。
       </p>
     </footer>
 
     <script src="load-data.js?v=1"></script>
-    <script src="app.js?v=7"></script>
+    <script src="app.js?v=8"></script>
   </body>
 </html>
