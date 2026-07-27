@@ -1,22 +1,21 @@
 (() => {
-  const tbody = document.getElementById("tbody");
+  const listEl = document.getElementById("listed-list");
   const searchInput = document.getElementById("search");
   const belowOnly = document.getElementById("below-only");
   const oversub1000 = document.getElementById("oversub-1000");
+  const sortKeyEl = document.getElementById("sort-key");
   const visibleCount = document.getElementById("visible-count");
   const stats = document.getElementById("stats");
   const fetched = document.getElementById("fetched");
 
   let data = null;
-  let sortKey = "cumulative";
-  let sortDir = "desc";
+  let sortKey = sortKeyEl ? sortKeyEl.value : "cumulative";
   let query = "";
 
   function parseNumber(value) {
     if (value == null) return NaN;
     const raw = String(value).trim();
     if (!raw || raw === "N/A" || raw === "認購不足" || raw === "-") return NaN;
-    // market cap ranges like 667.13-718.27 → use midpoint
     const range = raw.match(
       /^(-?[\d,]+(?:\.\d+)?)\s*-\s*(-?[\d,]+(?:\.\d+)?)$/
     );
@@ -60,9 +59,6 @@
     if (key === "listing_date") {
       return String(a.listing_date).localeCompare(String(b.listing_date));
     }
-    if (key === "code") {
-      return String(a.code).localeCompare(String(b.code));
-    }
     const na = key === "one_lot_cash" ? oneLotCash(a) : parseNumber(a[key]);
     const nb = key === "one_lot_cash" ? oneLotCash(b) : parseNumber(b[key]);
     if (Number.isNaN(na) && Number.isNaN(nb)) return 0;
@@ -93,11 +89,19 @@
         String(item.code).toLowerCase().includes(q)
       );
     });
+    const asc = sortKey === "listing_date" || sortKey === "name";
     rows = rows.slice().sort((a, b) => {
       const c = compare(a, b, sortKey);
-      return sortDir === "asc" ? c : -c;
+      return asc ? c : -c;
     });
     return rows;
+  }
+
+  function metric(label, value, className = "num") {
+    return `<div class="listed-metric">
+      <span class="listed-metric-label">${escapeHtml(label)}</span>
+      <span class="${className}">${value}</span>
+    </div>`;
   }
 
   function render() {
@@ -106,39 +110,55 @@
     visibleCount.textContent = `顯示 ${rows.length} / ${data.count}`;
     const frag = document.createDocumentFragment();
 
-    for (const item of rows) {
-      const tr = document.createElement("tr");
+    if (rows.length === 0) {
+      const empty = document.createElement("p");
+      empty.className = "listed-empty";
+      empty.textContent = "未有符合條件嘅最近上市新股";
+      frag.appendChild(empty);
+      listEl.replaceChildren(frag);
+      return;
+    }
+
+    rows.forEach((item, index) => {
+      const article = document.createElement("article");
+      article.className = "listed-row";
+      article.style.setProperty("--i", String(index));
       const nameHref = item.info_url || item.quote_url || "#";
       const codeHref = item.quote_url || item.info_url || "#";
+      const cash = oneLotCash(item);
       const badge = item.badge
         ? `<span class="badge">${escapeHtml(item.badge)}</span>`
         : "";
+      const below = item.badge === "跌穿上市價" ? " is-below" : "";
+      article.className = `listed-row${below}`;
 
-      tr.innerHTML = `
-        <td class="txt-l">
-          <div class="name-cell">
-            <a href="${escapeAttr(nameHref)}" target="_blank" rel="noopener noreferrer">${escapeHtml(item.name)}</a>
-            <span class="code"><a href="${escapeAttr(codeHref)}" target="_blank" rel="noopener noreferrer">${escapeHtml(item.code)}.HK</a></span>
+      article.innerHTML = `
+        <div class="listed-identity">
+          <div class="listed-title-row">
+            <a class="listed-name" href="${escapeAttr(nameHref)}" target="_blank" rel="noopener noreferrer">${escapeHtml(item.name)}</a>
+            <a class="listed-code" href="${escapeAttr(codeHref)}" target="_blank" rel="noopener noreferrer">${escapeHtml(item.code)}.HK</a>
             ${badge}
           </div>
-        </td>
-        <td class="num">${escapeHtml(item.listing_date)}</td>
-        <td class="num">${escapeHtml(item.lot_size)}</td>
-        <td class="num">${escapeHtml(item.market_cap)}</td>
-        <td class="num">${escapeHtml(item.offer_price)}</td>
-        <td class="num">${escapeHtml(item.listing_price)}</td>
-        <td class="num">${escapeHtml(item.oversub)}</td>
-        <td class="num">${escapeHtml(item.one_lot)}</td>
-        <td class="num">${escapeHtml(formatCash(oneLotCash(item)))}</td>
-        <td class="num">${escapeHtml(item.allotment)}</td>
-        <td class="num">${escapeHtml(item.current_price)}</td>
-        <td class="${performanceClass(item.first_day)}">${escapeHtml(item.first_day)}</td>
-        <td class="${performanceClass(item.cumulative)}">${escapeHtml(item.cumulative)}</td>
+          <p class="listed-date">上市 ${escapeHtml(item.listing_date)}</p>
+          <p class="listed-sub">
+            招股價 ${escapeHtml(item.offer_price || "—")}
+            · 上市價 ${escapeHtml(item.listing_price || "—")}
+            · 現價 ${escapeHtml(item.current_price || "—")}
+            · 中籤率 ${escapeHtml(item.allotment || "—")}
+          </p>
+        </div>
+        <div class="listed-metrics">
+          ${metric("超額倍數", escapeHtml(item.oversub || "—"))}
+          ${metric("穩中一手", escapeHtml(item.one_lot || "—"))}
+          ${metric("所需資金", escapeHtml(formatCash(cash)))}
+          ${metric("首日", escapeHtml(item.first_day || "—"), performanceClass(item.first_day))}
+          ${metric("累積", escapeHtml(item.cumulative || "—"), performanceClass(item.cumulative))}
+        </div>
       `;
-      frag.appendChild(tr);
-    }
+      frag.appendChild(article);
+    });
 
-    tbody.replaceChildren(frag);
+    listEl.replaceChildren(frag);
   }
 
   function escapeHtml(value) {
@@ -153,23 +173,6 @@
     return escapeHtml(value).replaceAll("'", "&#39;");
   }
 
-  document.querySelectorAll("th.sortable").forEach((th) => {
-    th.addEventListener("click", () => {
-      const key = th.dataset.key;
-      if (sortKey === key) {
-        sortDir = sortDir === "asc" ? "desc" : "asc";
-      } else {
-        sortKey = key;
-        sortDir = key === "name" || key === "listing_date" ? "asc" : "desc";
-      }
-      document.querySelectorAll("th.sortable").forEach((el) => {
-        el.classList.remove("sorted-asc", "sorted-desc");
-      });
-      th.classList.add(sortDir === "asc" ? "sorted-asc" : "sorted-desc");
-      render();
-    });
-  });
-
   let searchTimer;
   searchInput.addEventListener("input", () => {
     clearTimeout(searchTimer);
@@ -178,6 +181,13 @@
       render();
     }, 120);
   });
+
+  if (sortKeyEl) {
+    sortKeyEl.addEventListener("change", () => {
+      sortKey = sortKeyEl.value;
+      render();
+    });
+  }
 
   function bindFilter(el) {
     if (!el) return;
@@ -198,7 +208,7 @@
     .loadIpoData({
       api: "/api/listed",
       fallback: "data.json",
-      label: "已上市 IPO",
+      label: "最近上市",
     })
     .then((payload) => {
       if (!payload || !Array.isArray(payload.items)) {
@@ -206,7 +216,7 @@
         return;
       }
       data = payload;
-      stats.textContent = `共 ${data.count} 筆（合併 15 頁）`;
+      stats.textContent = `最新一頁 · ${data.count} 隻`;
       fetched.textContent = data.fetched_at
         ? `更新於 ${data.fetched_at.replace("T", " ")}`
         : "";

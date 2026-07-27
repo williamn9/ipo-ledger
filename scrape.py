@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Fetch all listed IPO pages from AAStocks and write data.json / data.js."""
+"""Fetch the latest listed IPO page from AAStocks and write data.json / data.js."""
 
 from __future__ import annotations
 
@@ -12,16 +12,14 @@ from html import unescape
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
-BASE = "https://www.aastocks.com/tc/stocks/market/ipo/listedipo.aspx?s=3&o=0&page={}"
+URL = "https://www.aastocks.com/tc/stocks/market/ipo/listedipo.aspx?s=3&o=0&page=1"
 UA = (
     "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
     "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
 )
-PAGES = 15
 
 
-def fetch_page(page: int, dest: Path) -> None:
-    url = BASE.format(page)
+def fetch_page(dest: Path) -> None:
     subprocess.run(
         [
             "curl",
@@ -32,7 +30,7 @@ def fetch_page(page: int, dest: Path) -> None:
             "Accept-Language: zh-HK,zh;q=0.9,en;q=0.8",
             "--max-time",
             "45",
-            url,
+            URL,
             "-o",
             str(dest),
         ],
@@ -115,21 +113,17 @@ def parse_page(html: str) -> list[dict]:
 
 
 def main() -> None:
-    all_rows: list[dict] = []
     with tempfile.TemporaryDirectory() as tmp:
-        tmp_path = Path(tmp)
-        for page in range(1, PAGES + 1):
-            dest = tmp_path / f"page_{page}.html"
-            print(f"Fetching page {page}/{PAGES}...")
-            fetch_page(page, dest)
-            html = dest.read_text(encoding="utf-8", errors="replace")
-            rows = parse_page(html)
-            print(f"  {len(rows)} rows")
-            all_rows.extend(rows)
+        dest = Path(tmp) / "page_1.html"
+        print("Fetching latest listed IPO page…")
+        fetch_page(dest)
+        html = dest.read_text(encoding="utf-8", errors="replace")
+        rows = parse_page(html)
+        print(f"  {len(rows)} rows")
 
     seen: set[tuple[str, str]] = set()
     unique: list[dict] = []
-    for row in all_rows:
+    for row in rows:
         key = (row["code"], row["listing_date"])
         if key in seen:
             continue
@@ -137,9 +131,10 @@ def main() -> None:
         unique.append(row)
 
     payload = {
-        "source": "https://www.aastocks.com/tc/stocks/market/ipo/listedipo.aspx?s=3&o=0",
+        "source": URL,
         "fetched_at": datetime.now().isoformat(timespec="seconds"),
         "count": len(unique),
+        "page": 1,
         "items": unique,
     }
 
