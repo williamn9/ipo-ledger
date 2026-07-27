@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>未來 30 日招股截止月曆</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Syne:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="atmosphere" aria-hidden="true"></div>
+    <nav class="site-nav" aria-label="頁面切換">
+      <a href="calendar.html" aria-current="page">IPO 月曆</a>
+      <a href="queue.html">排隊上市</a>
+      <a href="index.html">已上市</a>
+    </nav>
+
+    <header class="top">
+      <div class="brand-block">
+        <p class="brand">IPO Ledger</p>
+        <h1>未來 30 日招股截止月曆</h1>
+        <p class="lede">
+          按招股截止日期顯示新股，同市場新聞／孖展統計報道嘅超額認購倍數。
+        </p>
+      </div>
+      <div class="meta">
+        <p id="stats">載入中…</p>
+        <p id="fetched"></p>
+        <p id="window"></p>
+      </div>
+    </header>
+
+    <p class="note" id="note"></p>
+
+    <section class="cal-legend" aria-label="圖例">
+      <span><i class="dot live"></i>有招股截止</span>
+      <span><i class="dot hot"></i>已見超購報道</span>
+      <span><i class="dot today"></i>今日</span>
+    </section>
+
+    <main id="calendars" class="cal-months"></main>
+
+    <section class="cal-list-wrap">
+      <h2 class="cal-list-title">一覽</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th class="txt-l">招股截止</th>
+              <th class="txt-l">名稱 / 代號</th>
+              <th class="txt-l">狀態</th>
+              <th>超額認購（消息）</th>
+              <th class="txt-l">來源說明</th>
+              <th>入場費</th>
+              <th>上市日</th>
+            </tr>
+          </thead>
+          <tbody id="list-body"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <footer class="foot">
+      <p>
+        超購倍數來自市場新聞與孖展估算，唔等於最終配發結果。每次開啟頁面會即時更新；後備：<code
+          >python3 scrape_calendar.py</code
+        >
+        ／每日自動任務。
+      </p>
+    </footer>
+
+    <script src="load-data.js?v=1"></script>
+    <script src="calendar.js?v=3"></script>
+  </body>
+</html>

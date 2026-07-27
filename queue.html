@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>港股排隊上市 IPO</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Syne:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="atmosphere" aria-hidden="true"></div>
+    <nav class="site-nav" aria-label="頁面切換">
+      <a href="calendar.html">IPO 月曆</a>
+      <a href="queue.html" aria-current="page">排隊上市</a>
+      <a href="index.html">已上市</a>
+    </nav>
+    <header class="top">
+      <div class="brand-block">
+        <p class="brand">IPO Ledger</p>
+        <h1>港股排隊上市</h1>
+        <p class="lede">
+          列出正在招股／即將上市公司，同埋超額認購情況（有公布先顯示倍數）。
+        </p>
+      </div>
+      <div class="meta">
+        <p id="stats">載入中…</p>
+        <p id="fetched"></p>
+        <a
+          class="source"
+          href="https://www.aastocks.com/tc/stocks/market/ipo/mainpage.aspx"
+          target="_blank"
+          rel="noopener noreferrer"
+          >資料來源 · AAStocks IPO 主頁</a
+        >
+      </div>
+    </header>
+
+    <section class="toolbar" aria-label="表格工具">
+      <label class="search">
+        <span class="sr-only">搜尋</span>
+        <input
+          id="search"
+          type="search"
+          placeholder="搜尋名稱、代號或行業…"
+          autocomplete="off"
+        />
+      </label>
+      <label class="filter">
+        <select id="status-filter">
+          <option value="all">全部狀態</option>
+          <option value="正在招股">正在招股</option>
+          <option value="已截止・待上市">已截止・待上市</option>
+          <option value="即將上市">即將上市</option>
+        </select>
+      </label>
+      <p class="visible" id="visible-count"></p>
+    </section>
+
+    <p class="note" id="note"></p>
+
+    <main class="table-wrap">
+      <table id="queue-table">
+        <thead>
+          <tr>
+            <th class="txt-l">狀態</th>
+            <th class="txt-l sortable" data-key="name">名稱 / 代號</th>
+            <th class="txt-l sortable" data-key="industry">行業</th>
+            <th class="sortable" data-key="offer_price">招股價</th>
+            <th class="sortable" data-key="oversub">超額倍數</th>
+            <th class="sortable" data-key="allotment">一手中籤率</th>
+            <th class="sortable" data-key="one_lot">穩中一手</th>
+            <th class="sortable" data-key="entry_fee">入場費</th>
+            <th class="sortable" data-key="deadline">招股截止</th>
+            <th class="sortable sorted-asc" data-key="listing_date">上市日期</th>
+          </tr>
+        </thead>
+        <tbody id="tbody"></tbody>
+      </table>
+    </main>
+
+    <footer class="foot">
+      <p>
+        超額倍數多數要等公開發售截止、配發結果公布先會有數字；招股進行中通常顯示「尚未公布」。每次開啟頁面會即時更新；後備：每日早上 8:00 <code>./update.sh</code>。
+      </p>
+    </footer>
+
+    <script src="load-data.js?v=1"></script>
+    <script src="queue.js?v=2"></script>
+  </body>
+</html>

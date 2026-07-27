@@ -1,0 +1,47 @@
+{
+  "as_of": "2026-07-27",
+  "window_end": "2026-08-26",
+  "fetched_at": "2026-07-27T22:22:28",
+  "count": 1,
+  "items": [
+    {
+      "name": "中際旭創",
+      "code": "03308",
+      "badge": "今日截止招股",
+      "industry": "電訊及網絡器材設備",
+      "offer_price": "N/A",
+      "lot_size": "50",
+      "entry_fee": "51,009.29",
+      "deadline": "2026/07/27",
+      "listing_date": "2026/07/30",
+      "info_url": "https://www.aastocks.com/tc/stocks/market/ipo/upcomingipo/company-summary?symbol=03308#info",
+      "status": "正在招股",
+      "deadline_iso": "2026-07-27",
+      "listing_date_iso": "2026-07-30",
+      "oversub_primary": "20.9 倍",
+      "oversub_multiple": 20.928,
+      "oversub_note": "市場估算（華盛孖展×校準）",
+      "news": [
+        {
+          "multiple": 20.928,
+          "display": "20.9 倍",
+          "note": "市場估算（華盛孖展×校準）",
+          "headline": "中際旭創 估計超購 20.9 倍",
+          "observed_at": "2026-07-27T13:05:11.972Z"
+        },
+        {
+          "multiple": 9.0,
+          "display": "9 倍",
+          "note": "HKET（孖展／公開統計）",
+          "headline": "【新股IPO】中際旭創3308市傳定價980元、集資縮至約534億元　孖展559.9億超購逾9倍　H股水位理論值有幾多"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    "AAStocks 正在招股／即將上市",
+    "HKET 新股新聞（超購報道）",
+    "市場孖展估算（如有）"
+  ],
+  "note": "未來 30 日以 AAStocks 招股截止日期為準；超額倍數來自市場新聞／孖展統計，招股進行中數字可能隨時更新，最終以配發結果為準。"
+}
