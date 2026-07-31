@@ -1,14 +1,14 @@
 {
-  "as_of": "2026-07-30",
-  "window_end": "2026-08-29",
-  "fetched_at": "2026-07-30T01:42:09",
+  "as_of": "2026-07-31",
+  "window_end": "2026-08-30",
+  "fetched_at": "2026-07-31T01:59:18",
   "count": 1,
   "items": [
     {
       "name": "拿森科技",
       "code": "02261",
-      "badge": "5日後截止招股",
-      "industry": "N/A",
+      "badge": "4日後截止招股",
+      "industry": "機動車零配件與設備",
       "offer_price": "10.42-11.18",
       "lot_size": "100",
       "entry_fee": "1,129.27",
