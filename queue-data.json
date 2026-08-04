@@ -1,6 +1,6 @@
 {
   "source": "https://www.aastocks.com/tc/stocks/market/ipo/mainpage.aspx",
-  "fetched_at": "2026-08-03T01:59:13",
+  "fetched_at": "2026-08-04T01:44:58",
   "count": 1,
   "offering_count": 1,
   "pending_count": 0,
@@ -9,7 +9,7 @@
       "status": "正在招股",
       "name": "拿森科技",
       "code": "02261",
-      "badge": "明天截止招股",
+      "badge": "今日截止招股",
       "industry": "機動車零配件與設備",
       "offer_price": "10.42-11.18",
       "lot_size": "100",
