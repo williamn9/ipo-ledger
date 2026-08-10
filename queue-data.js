@@ -1,1 +1,1 @@
-window.IPO_QUEUE = {"source": "https://www.aastocks.com/tc/stocks/market/ipo/mainpage.aspx", "fetched_at": "2026-08-09T01:02:11", "count": 0, "offering_count": 0, "pending_count": 0, "items": [], "note": "超額倍數通常喺公開發售截止後／配發結果公布先有數字；招股進行中多數顯示「尚未公布」。"};
+window.IPO_QUEUE = {"source": "https://www.aastocks.com/tc/stocks/market/ipo/mainpage.aspx", "fetched_at": "2026-08-10T01:03:59", "count": 0, "offering_count": 0, "pending_count": 0, "items": [], "note": "超額倍數通常喺公開發售截止後／配發結果公布先有數字；招股進行中多數顯示「尚未公布」。"};

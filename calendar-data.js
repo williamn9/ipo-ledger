@@ -1,1 +1,1 @@
-window.IPO_CALENDAR = {"as_of": "2026-08-09", "window_end": "2026-09-08", "fetched_at": "2026-08-09T01:02:17", "count": 0, "items": [], "sources": ["AAStocks 正在招股／即將上市", "HKET 新股新聞（超購報道）", "市場孖展估算（如有）"], "note": "未來 30 日以 AAStocks 招股截止日期為準；超額倍數來自市場新聞／孖展統計，招股進行中數字可能隨時更新，最終以配發結果為準。"};
+window.IPO_CALENDAR = {"as_of": "2026-08-10", "window_end": "2026-09-09", "fetched_at": "2026-08-10T01:04:04", "count": 0, "items": [], "sources": ["AAStocks 正在招股／即將上市", "HKET 新股新聞（超購報道）", "市場孖展估算（如有）"], "note": "未來 30 日以 AAStocks 招股截止日期為準；超額倍數來自市場新聞／孖展統計，招股進行中數字可能隨時更新，最終以配發結果為準。"};
