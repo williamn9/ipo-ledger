@@ -1,13 +1,13 @@
 {
-  "as_of": "2026-08-18",
-  "window_end": "2026-09-17",
-  "fetched_at": "2026-08-18T00:43:23",
+  "as_of": "2026-08-19",
+  "window_end": "2026-09-18",
+  "fetched_at": "2026-08-19T00:43:23",
   "count": 1,
   "items": [
     {
       "name": "君正股份",
       "code": "03223",
-      "badge": "2日後截止招股",
+      "badge": "明天截止招股",
       "industry": "半導體產品及設備",
       "offer_price": "N/A",
       "lot_size": "100",
