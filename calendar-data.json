@@ -1,13 +1,13 @@
 {
-  "as_of": "2026-08-31",
-  "window_end": "2026-09-30",
-  "fetched_at": "2026-08-31T02:32:48",
+  "as_of": "2026-09-01",
+  "window_end": "2026-10-01",
+  "fetched_at": "2026-09-01T02:47:11",
   "count": 3,
   "items": [
     {
       "name": "麥科田",
       "code": "02041",
-      "badge": "2日後截止招股",
+      "badge": "明天截止招股",
       "industry": "醫療保健設備",
       "offer_price": "15.42",
       "lot_size": "100",
@@ -26,8 +26,8 @@
     {
       "name": "江波龍",
       "code": "09976",
-      "badge": "3日後截止招股",
-      "industry": "N/A",
+      "badge": "2日後截止招股",
+      "industry": "半導體產品及設備",
       "offer_price": "N/A",
       "lot_size": "50",
       "entry_fee": "12,151.32",
@@ -45,8 +45,8 @@
     {
       "name": "優地機器人",
       "code": "03231",
-      "badge": "4日後截止招股",
-      "industry": "N/A",
+      "badge": "3日後截止招股",
+      "industry": "先進硬件及軟件",
       "offer_price": "14.45-19.55",
       "lot_size": "200",
       "entry_fee": "3,949.44",
