@@ -1,14 +1,14 @@
 {
-  "as_of": "2026-09-11",
-  "window_end": "2026-10-11",
-  "fetched_at": "2026-09-11T02:12:45",
+  "as_of": "2026-09-12",
+  "window_end": "2026-10-12",
+  "fetched_at": "2026-09-12T02:19:17",
   "count": 1,
   "items": [
     {
       "name": "星環科技",
       "code": "06727",
-      "badge": "5日後截止招股",
-      "industry": "N/A",
+      "badge": "4日後截止招股",
+      "industry": "先進硬件及軟件",
       "offer_price": "49-61",
       "lot_size": "100",
       "entry_fee": "6,161.51",
