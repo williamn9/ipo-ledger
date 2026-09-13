@@ -1,6 +1,6 @@
 {
   "source": "https://www.aastocks.com/tc/stocks/market/ipo/mainpage.aspx",
-  "fetched_at": "2026-09-12T02:19:12",
+  "fetched_at": "2026-09-13T02:16:13",
   "count": 1,
   "offering_count": 1,
   "pending_count": 0,
@@ -9,7 +9,7 @@
       "status": "正在招股",
       "name": "星環科技",
       "code": "06727",
-      "badge": "4日後截止招股",
+      "badge": "3日後截止招股",
       "industry": "先進硬件及軟件",
       "offer_price": "49-61",
       "lot_size": "100",
