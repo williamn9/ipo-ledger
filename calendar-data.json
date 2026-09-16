@@ -1,13 +1,13 @@
 {
-  "as_of": "2026-09-15",
-  "window_end": "2026-10-15",
-  "fetched_at": "2026-09-15T02:37:57",
+  "as_of": "2026-09-16",
+  "window_end": "2026-10-16",
+  "fetched_at": "2026-09-16T02:32:20",
   "count": 3,
   "items": [
     {
       "name": "星環科技",
       "code": "06727",
-      "badge": "明天截止招股",
+      "badge": "今日截止招股",
       "industry": "先進硬件及軟件",
       "offer_price": "49-61",
       "lot_size": "100",
@@ -26,7 +26,7 @@
     {
       "name": "四方精創",
       "code": "06700",
-      "badge": "2日後截止招股",
+      "badge": "明天截止招股",
       "industry": "應用軟件",
       "offer_price": "最高 16",
       "lot_size": "100",
@@ -45,7 +45,7 @@
     {
       "name": "納真科技",
       "code": "09856",
-      "badge": "2日後截止招股",
+      "badge": "明天截止招股",
       "industry": "電器部件與設備",
       "offer_price": "32.96",
       "lot_size": "100",
