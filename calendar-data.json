@@ -1,13 +1,13 @@
 {
-  "as_of": "2026-09-23",
-  "window_end": "2026-10-23",
-  "fetched_at": "2026-09-23T02:34:10",
+  "as_of": "2026-09-24",
+  "window_end": "2026-10-24",
+  "fetched_at": "2026-09-24T02:23:29",
   "count": 5,
   "items": [
     {
       "name": "深圳市景旺電子",
       "code": "03228",
-      "badge": "明天截止招股",
+      "badge": "今日截止招股",
       "industry": "線路板",
       "offer_price": "最高 69.88",
       "lot_size": "100",
@@ -26,7 +26,7 @@
     {
       "name": "羅博特科智能科技",
       "code": "03757",
-      "badge": "明天截止招股",
+      "badge": "今日截止招股",
       "industry": "新能源及節能環保",
       "offer_price": "最高 436",
       "lot_size": "50",
@@ -45,7 +45,7 @@
     {
       "name": "本末動力（北京）科技",
       "code": "06731",
-      "badge": "明天截止招股",
+      "badge": "今日截止招股",
       "industry": "先進硬件及軟件",
       "offer_price": "21.6",
       "lot_size": "100",
@@ -64,7 +64,7 @@
     {
       "name": "彤程新材料",
       "code": "09607",
-      "badge": "明天截止招股",
+      "badge": "今日截止招股",
       "industry": "綜合化工產品",
       "offer_price": "39-44",
       "lot_size": "100",
@@ -83,7 +83,7 @@
     {
       "name": "歡創科技",
       "code": "06802",
-      "badge": "2日後截止招股",
+      "badge": "明天截止招股",
       "industry": "先進硬件及軟件",
       "offer_price": "58.85",
       "lot_size": "100",
