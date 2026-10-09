@@ -1,6 +1,6 @@
 {
   "source": "https://www.aastocks.com/tc/stocks/market/ipo/mainpage.aspx",
-  "fetched_at": "2026-10-08T03:42:58",
+  "fetched_at": "2026-10-09T03:48:27",
   "count": 1,
   "offering_count": 1,
   "pending_count": 0,
@@ -9,7 +9,7 @@
       "status": "正在招股",
       "name": "傳音控股",
       "code": "02636",
-      "badge": "4日後截止招股",
+      "badge": "3日後截止招股",
       "industry": "智能手機",
       "offer_price": "35.3-38.8",
       "lot_size": "100",
