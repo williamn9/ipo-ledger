@@ -1,29 +1,9 @@
 {
-  "as_of": "2026-10-12",
-  "window_end": "2026-11-11",
-  "fetched_at": "2026-10-12T03:27:59",
-  "count": 1,
-  "items": [
-    {
-      "name": "傳音控股",
-      "code": "02636",
-      "badge": "今日截止招股",
-      "industry": "智能手機",
-      "offer_price": "35.3-38.8",
-      "lot_size": "100",
-      "entry_fee": "3,919.13",
-      "deadline": "2026/10/12",
-      "listing_date": "2026/10/15",
-      "info_url": "https://www.aastocks.com/tc/stocks/market/ipo/upcomingipo/company-summary?symbol=02636#info",
-      "status": "正在招股",
-      "deadline_iso": "2026-10-12",
-      "listing_date_iso": "2026-10-15",
-      "oversub_primary": "尚未見報道",
-      "oversub_multiple": null,
-      "oversub_note": "招股中／未見超購消息",
-      "news": []
-    }
-  ],
+  "as_of": "2026-10-13",
+  "window_end": "2026-11-12",
+  "fetched_at": "2026-10-13T04:42:40",
+  "count": 0,
+  "items": [],
   "sources": [
     "AAStocks 正在招股／即將上市",
     "HKET 新股新聞（超購報道）",
