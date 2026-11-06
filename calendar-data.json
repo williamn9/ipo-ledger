@@ -1,67 +1,13 @@
 {
-  "as_of": "2026-11-05",
-  "window_end": "2026-12-05",
-  "fetched_at": "2026-11-05T04:25:13",
-  "count": 6,
+  "as_of": "2026-11-06",
+  "window_end": "2026-12-06",
+  "fetched_at": "2026-11-06T04:23:05",
+  "count": 4,
   "items": [
-    {
-      "name": "芯德半導體",
-      "code": "07672",
-      "badge": "今日截止招股",
-      "industry": "半導體產品及設備",
-      "offer_price": "8.6-9.6",
-      "lot_size": "500",
-      "entry_fee": "4,848.41",
-      "deadline": "2026/11/05",
-      "listing_date": "2026/11/10",
-      "info_url": "https://www.aastocks.com/tc/stocks/market/ipo/upcomingipo/company-summary?symbol=07672#info",
-      "status": "正在招股",
-      "deadline_iso": "2026-11-05",
-      "listing_date_iso": "2026-11-10",
-      "oversub_primary": "13.6 倍",
-      "oversub_multiple": 13.632,
-      "oversub_note": "市場估算（華盛孖展×校準）",
-      "news": [
-        {
-          "multiple": 13.632,
-          "display": "13.6 倍",
-          "note": "市場估算（華盛孖展×校準）",
-          "headline": "芯德半導體 估計超購 13.6 倍",
-          "observed_at": "2026-11-05T04:05:10.887Z"
-        }
-      ]
-    },
-    {
-      "name": "登臨科技－Ｐ",
-      "code": "09917",
-      "badge": "今日截止招股",
-      "industry": "電子元件",
-      "offer_price": "231-288",
-      "lot_size": "25",
-      "entry_fee": "7,272.61",
-      "deadline": "2026/11/05",
-      "listing_date": "2026/11/10",
-      "info_url": "https://www.aastocks.com/tc/stocks/market/ipo/upcomingipo/company-summary?symbol=09917#info",
-      "status": "正在招股",
-      "deadline_iso": "2026-11-05",
-      "listing_date_iso": "2026-11-10",
-      "oversub_primary": "2.8 倍",
-      "oversub_multiple": 2.7840000000000003,
-      "oversub_note": "市場估算（華盛孖展×校準）",
-      "news": [
-        {
-          "multiple": 2.7840000000000003,
-          "display": "2.8 倍",
-          "note": "市場估算（華盛孖展×校準）",
-          "headline": "登臨科技－Ｐ 估計超購 2.8 倍",
-          "observed_at": "2026-11-05T04:05:10.887Z"
-        }
-      ]
-    },
     {
       "name": "新荷花",
       "code": "02206",
-      "badge": "明天截止招股",
+      "badge": "今日截止招股",
       "industry": "醫療保健用品",
       "offer_price": "40.2-50.55",
       "lot_size": "50",
@@ -72,23 +18,23 @@
       "status": "正在招股",
       "deadline_iso": "2026-11-06",
       "listing_date_iso": "2026-11-11",
-      "oversub_primary": "19.6 倍",
-      "oversub_multiple": 19.568,
+      "oversub_primary": "881.9 倍",
+      "oversub_multiple": 881.9040000000001,
       "oversub_note": "市場估算（華盛孖展×校準）",
       "news": [
         {
-          "multiple": 19.568,
-          "display": "19.6 倍",
+          "multiple": 881.9040000000001,
+          "display": "881.9 倍",
           "note": "市場估算（華盛孖展×校準）",
-          "headline": "新荷花 估計超購 19.6 倍",
-          "observed_at": "2026-11-05T04:05:10.887Z"
+          "headline": "新荷花 估計超購 881.9 倍",
+          "observed_at": "2026-11-06T04:05:10.858Z"
         }
       ]
     },
     {
       "name": "一微科技",
       "code": "02065",
-      "badge": "4日後截止招股",
+      "badge": "3日後截止招股",
       "industry": "先進硬件及軟件",
       "offer_price": "9.27-11.58",
       "lot_size": "500",
@@ -99,23 +45,23 @@
       "status": "正在招股",
       "deadline_iso": "2026-11-09",
       "listing_date_iso": "2026-11-12",
-      "oversub_primary": "0.8 倍",
-      "oversub_multiple": 0.8,
+      "oversub_primary": "2.0 倍",
+      "oversub_multiple": 2.032,
       "oversub_note": "市場估算（華盛孖展×校準）",
       "news": [
         {
-          "multiple": 0.8,
-          "display": "0.8 倍",
+          "multiple": 2.032,
+          "display": "2.0 倍",
           "note": "市場估算（華盛孖展×校準）",
-          "headline": "一微科技 估計超購 0.8 倍",
-          "observed_at": "2026-11-05T04:05:10.887Z"
+          "headline": "一微科技 估計超購 2.0 倍",
+          "observed_at": "2026-11-06T04:05:10.858Z"
         }
       ]
     },
     {
       "name": "宏芯宇",
       "code": "02681",
-      "badge": "4日後截止招股",
+      "badge": "3日後截止招股",
       "industry": "半導體產品及設備",
       "offer_price": "72.29-82.9",
       "lot_size": "100",
@@ -126,23 +72,23 @@
       "status": "正在招股",
       "deadline_iso": "2026-11-09",
       "listing_date_iso": "2026-11-12",
-      "oversub_primary": "1.3 倍",
-      "oversub_multiple": 1.312,
+      "oversub_primary": "1.8 倍",
+      "oversub_multiple": 1.8239999999999998,
       "oversub_note": "市場估算（華盛孖展×校準）",
       "news": [
         {
-          "multiple": 1.312,
-          "display": "1.3 倍",
+          "multiple": 1.8239999999999998,
+          "display": "1.8 倍",
           "note": "市場估算（華盛孖展×校準）",
-          "headline": "宏芯宇 估計超購 1.3 倍",
-          "observed_at": "2026-11-05T04:05:10.887Z"
+          "headline": "宏芯宇 估計超購 1.8 倍",
+          "observed_at": "2026-11-06T04:05:10.858Z"
         }
       ]
     },
     {
       "name": "國星宇航",
       "code": "06935",
-      "badge": "5日後截止招股",
+      "badge": "4日後截止招股",
       "industry": "衛星電訊服務",
       "offer_price": "24.9-33.2",
       "lot_size": "100",
@@ -153,16 +99,16 @@
       "status": "正在招股",
       "deadline_iso": "2026-11-10",
       "listing_date_iso": "2026-11-13",
-      "oversub_primary": "0.0 倍",
-      "oversub_multiple": 0.032,
+      "oversub_primary": "0.4 倍",
+      "oversub_multiple": 0.384,
       "oversub_note": "市場估算（華盛孖展×校準）",
       "news": [
         {
-          "multiple": 0.032,
-          "display": "0.0 倍",
+          "multiple": 0.384,
+          "display": "0.4 倍",
           "note": "市場估算（華盛孖展×校準）",
-          "headline": "國星宇航 估計超購 0.0 倍",
-          "observed_at": "2026-11-05T04:05:10.887Z"
+          "headline": "國星宇航 估計超購 0.4 倍",
+          "observed_at": "2026-11-06T04:05:10.858Z"
         }
       ]
     }
