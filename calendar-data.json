@@ -1,37 +1,9 @@
 {
-  "as_of": "2026-11-10",
-  "window_end": "2026-12-10",
-  "fetched_at": "2026-11-10T05:23:09",
-  "count": 1,
-  "items": [
-    {
-      "name": "國星宇航",
-      "code": "06935",
-      "badge": "今日截止招股",
-      "industry": "衛星電訊服務",
-      "offer_price": "24.9-33.2",
-      "lot_size": "100",
-      "entry_fee": "3,353.48",
-      "deadline": "2026/11/10",
-      "listing_date": "2026/11/13",
-      "info_url": "https://www.aastocks.com/tc/stocks/market/ipo/upcomingipo/company-summary?symbol=06935#info",
-      "status": "正在招股",
-      "deadline_iso": "2026-11-10",
-      "listing_date_iso": "2026-11-13",
-      "oversub_primary": "2.3 倍",
-      "oversub_multiple": 2.32,
-      "oversub_note": "市場估算（華盛孖展×校準）",
-      "news": [
-        {
-          "multiple": 2.32,
-          "display": "2.3 倍",
-          "note": "市場估算（華盛孖展×校準）",
-          "headline": "國星宇航 估計超購 2.3 倍",
-          "observed_at": "2026-11-10T05:05:11.200Z"
-        }
-      ]
-    }
-  ],
+  "as_of": "2026-11-11",
+  "window_end": "2026-12-11",
+  "fetched_at": "2026-11-11T03:53:43",
+  "count": 0,
+  "items": [],
   "sources": [
     "AAStocks 正在招股／即將上市",
     "HKET 新股新聞（超購報道）",
