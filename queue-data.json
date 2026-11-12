@@ -1,27 +1,10 @@
 {
   "source": "https://www.aastocks.com/tc/stocks/market/ipo/mainpage.aspx",
-  "fetched_at": "2026-11-11T03:53:38",
-  "count": 2,
+  "fetched_at": "2026-11-12T05:01:26",
+  "count": 1,
   "offering_count": 0,
-  "pending_count": 2,
+  "pending_count": 1,
   "items": [
-    {
-      "status": "已截止・待上市",
-      "name": "國星宇航",
-      "code": "06935",
-      "badge": "2日後上市",
-      "industry": "衛星電訊服務",
-      "offer_price": "定價於11/11",
-      "lot_size": "100",
-      "entry_fee": "3,353.48",
-      "deadline": "2026/11/10",
-      "listing_date": "2026/11/13",
-      "grey_date": "2026/11/12",
-      "oversub": "N/A",
-      "allotment": "N/A",
-      "one_lot": "N/A",
-      "info_url": "https://www.aastocks.com/tc/stocks/market/ipo/upcomingipo/company-summary?symbol=06935#info"
-    },
     {
       "status": "即將上市",
       "name": "中旅港澳",
