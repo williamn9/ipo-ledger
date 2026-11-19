@@ -1,13 +1,13 @@
 {
-  "as_of": "2026-11-18",
-  "window_end": "2026-12-18",
-  "fetched_at": "2026-11-18T05:17:00",
+  "as_of": "2026-11-19",
+  "window_end": "2026-12-19",
+  "fetched_at": "2026-11-19T05:12:09",
   "count": 1,
   "items": [
     {
       "name": "先通醫藥－Ｂ",
       "code": "09941",
-      "badge": "明天截止招股",
+      "badge": "今日截止招股",
       "industry": "生物科技- 製藥",
       "offer_price": "52-68",
       "lot_size": "50",
@@ -18,16 +18,16 @@
       "status": "正在招股",
       "deadline_iso": "2026-11-19",
       "listing_date_iso": "2026-11-24",
-      "oversub_primary": "1033.8 倍",
-      "oversub_multiple": 1033.824,
+      "oversub_primary": "6082.1 倍",
+      "oversub_multiple": 6082.144,
       "oversub_note": "市場估算（華盛孖展×校準）",
       "news": [
         {
-          "multiple": 1033.824,
-          "display": "1033.8 倍",
+          "multiple": 6082.144,
+          "display": "6082.1 倍",
           "note": "市場估算（華盛孖展×校準）",
-          "headline": "先通醫藥－Ｂ 估計超購 1033.8 倍",
-          "observed_at": "2026-11-18T05:05:11.929Z"
+          "headline": "先通醫藥－Ｂ 估計超購 6082.1 倍",
+          "observed_at": "2026-11-19T05:05:10.130Z"
         }
       ]
     }

@@ -1,6 +1,6 @@
 {
   "source": "https://www.aastocks.com/tc/stocks/market/ipo/mainpage.aspx",
-  "fetched_at": "2026-11-18T05:16:55",
+  "fetched_at": "2026-11-19T05:12:02",
   "count": 2,
   "offering_count": 1,
   "pending_count": 1,
@@ -9,7 +9,7 @@
       "status": "正在招股",
       "name": "先通醫藥－Ｂ",
       "code": "09941",
-      "badge": "明天截止招股",
+      "badge": "今日截止招股",
       "industry": "生物科技- 製藥",
       "offer_price": "52-68",
       "lot_size": "50",
