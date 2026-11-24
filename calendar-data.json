@@ -1,13 +1,13 @@
 {
-  "as_of": "2026-11-23",
-  "window_end": "2026-12-23",
-  "fetched_at": "2026-11-23T04:54:04",
+  "as_of": "2026-11-24",
+  "window_end": "2026-12-24",
+  "fetched_at": "2026-11-24T07:43:28",
   "count": 1,
   "items": [
     {
       "name": "微億智造",
       "code": "03275",
-      "badge": "",
+      "badge": "7日後截止招股",
       "industry": "先進硬件及軟件",
       "offer_price": "12.07-15.69",
       "lot_size": "100",
@@ -18,10 +18,18 @@
       "status": "正在招股",
       "deadline_iso": "2026-12-01",
       "listing_date_iso": "2026-12-04",
-      "oversub_primary": "尚未見報道",
-      "oversub_multiple": null,
-      "oversub_note": "招股中／未見超購消息",
-      "news": []
+      "oversub_primary": "54.4 倍",
+      "oversub_multiple": 54.352000000000004,
+      "oversub_note": "市場估算（華盛孖展×校準）",
+      "news": [
+        {
+          "multiple": 54.352000000000004,
+          "display": "54.4 倍",
+          "note": "市場估算（華盛孖展×校準）",
+          "headline": "微億智造 估計超購 54.4 倍",
+          "observed_at": "2026-11-24T07:05:11.645Z"
+        }
+      ]
     }
   ],
   "sources": [
