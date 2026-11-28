@@ -1,13 +1,13 @@
 {
-  "as_of": "2026-11-27",
-  "window_end": "2026-12-27",
-  "fetched_at": "2026-11-27T05:57:12",
+  "as_of": "2026-11-28",
+  "window_end": "2026-12-28",
+  "fetched_at": "2026-11-28T05:38:48",
   "count": 3,
   "items": [
     {
       "name": "微億智造",
       "code": "03275",
-      "badge": "4日後截止招股",
+      "badge": "3日後截止招股",
       "industry": "先進硬件及軟件",
       "offer_price": "12.07-15.69",
       "lot_size": "100",
@@ -18,23 +18,23 @@
       "status": "正在招股",
       "deadline_iso": "2026-12-01",
       "listing_date_iso": "2026-12-04",
-      "oversub_primary": "129.2 倍",
-      "oversub_multiple": 129.168,
+      "oversub_primary": "163.2 倍",
+      "oversub_multiple": 163.168,
       "oversub_note": "市場估算（華盛孖展×校準）",
       "news": [
         {
-          "multiple": 129.168,
-          "display": "129.2 倍",
+          "multiple": 163.168,
+          "display": "163.2 倍",
           "note": "市場估算（華盛孖展×校準）",
-          "headline": "微億智造 估計超購 129.2 倍",
-          "observed_at": "2026-11-27T05:05:10.146Z"
+          "headline": "微億智造 估計超購 163.2 倍",
+          "observed_at": "2026-11-28T05:05:10.661Z"
         }
       ]
     },
     {
       "name": "袁記食品",
       "code": "03364",
-      "badge": "5日後截止招股",
+      "badge": "4日後截止招股",
       "industry": "包裝食品",
       "offer_price": "23-28",
       "lot_size": "100",
@@ -45,23 +45,23 @@
       "status": "正在招股",
       "deadline_iso": "2026-12-02",
       "listing_date_iso": "2026-12-07",
-      "oversub_primary": "0.4 倍",
-      "oversub_multiple": 0.41600000000000004,
+      "oversub_primary": "2.5 倍",
+      "oversub_multiple": 2.4960000000000004,
       "oversub_note": "市場估算（華盛孖展×校準）",
       "news": [
         {
-          "multiple": 0.41600000000000004,
-          "display": "0.4 倍",
+          "multiple": 2.4960000000000004,
+          "display": "2.5 倍",
           "note": "市場估算（華盛孖展×校準）",
-          "headline": "袁記食品 估計超購 0.4 倍",
-          "observed_at": "2026-11-27T05:05:10.146Z"
+          "headline": "袁記食品 估計超購 2.5 倍",
+          "observed_at": "2026-11-28T05:05:10.661Z"
         }
       ]
     },
     {
       "name": "貝斯特材",
       "code": "03707",
-      "badge": "5日後截止招股",
+      "badge": "4日後截止招股",
       "industry": "電子元件",
       "offer_price": "6-7",
       "lot_size": "500",
@@ -72,16 +72,16 @@
       "status": "正在招股",
       "deadline_iso": "2026-12-02",
       "listing_date_iso": "2026-12-07",
-      "oversub_primary": "1.0 倍",
-      "oversub_multiple": 1.024,
+      "oversub_primary": "7.1 倍",
+      "oversub_multiple": 7.136,
       "oversub_note": "市場估算（華盛孖展×校準）",
       "news": [
         {
-          "multiple": 1.024,
-          "display": "1.0 倍",
+          "multiple": 7.136,
+          "display": "7.1 倍",
           "note": "市場估算（華盛孖展×校準）",
-          "headline": "貝斯特材 估計超購 1.0 倍",
-          "observed_at": "2026-11-27T05:05:10.146Z"
+          "headline": "貝斯特材 估計超購 7.1 倍",
+          "observed_at": "2026-11-28T05:05:10.661Z"
         }
       ]
     }
